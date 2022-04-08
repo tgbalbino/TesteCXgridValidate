@@ -67,8 +67,6 @@ begin
   ClientDataSet1.AppendRecord([4, '']);
   ClientDataSet1.AppendRecord([5, '']);
   ClientDataSet1.AppendRecord([6, '']);
-
-  cxGrid1DBTableView1.VisibleColumns[1].Properties.OnValidate :=  cxGrid1DBTableView1ChecckPropertiesValidate;
 end;
 
 procedure TForm1.MarcaDesmarca(Marca: String);
@@ -86,10 +84,7 @@ begin
       for i := 0 to cxGrid1DBTableView1.DataController.FilteredRecordCount -1 do
         begin
         cxGrid1DBTableView1.DataController.FocusedRecordIndex := cxGrid1DBTableView1.DataController.FilteredRecordIndex[i];
-
         cxGrid1DBTableView1.DataController.SetEditValue(cxGrid1DBTableView1Checck.Index, Marca, evsText);
-       // cxGrid1DBTableView1.DataController.Post(true);
-//        cxGrid1DBTableView1.DataController.Post;
       end;
     finally
       cxGrid1DBTableView1.DataController.FocusedRecordIndex := r;

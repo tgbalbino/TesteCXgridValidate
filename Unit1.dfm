@@ -54,9 +54,6 @@ object Form1: TForm1
     Caption = 'Marca'
     TabOrder = 1
     OnClick = BitBtn1Click
-    ExplicitLeft = 40
-    ExplicitTop = 16
-    ExplicitHeight = 25
   end
   object BitBtn2: TBitBtn
     AlignWithMargins = True
@@ -68,9 +65,6 @@ object Form1: TForm1
     Caption = 'Desmarca'
     TabOrder = 2
     OnClick = BitBtn2Click
-    ExplicitLeft = 120
-    ExplicitTop = 16
-    ExplicitHeight = 25
   end
   object DataSource1: TDataSource
     DataSet = ClientDataSet1
